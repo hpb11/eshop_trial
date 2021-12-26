@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.LoginActivity">
+
+    <FrameLayout
+        android:id="@+id/header_image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/header_image_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:layout_width="416dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/button_background" />
+        <ImageView
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/eshop"/>
+
+
+
+    </FrameLayout>
+
+    <com.example.eshop.utils.ESTextviewBold
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="@dimen/title_txtsize"
+        android:textColor="@color/colourPrimaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_image"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <com.example.eshop.utils.ESEditText
+        android:id="@+id/ESEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:padding="@dimen/et_padding"
+        android:textColor="@color/colourPrimaryText"
+        android:textSize="@dimen/et_textsize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.087"
+        tools:layout_editor_absoluteX="0dp"
+        tools:text="abc@gmail.com" />
+
+    <com.example.eshop.utils.ESTextviewBold
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="@dimen/title_txtsize"
+        android:textColor="@color/colourSecondaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_image"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <com.example.eshop.utils.ESEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:padding="@dimen/et_padding"
+        android:textColor="@color/colourPrimaryText"
+        android:textSize="@dimen/et_textsize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.27"
+        tools:layout_editor_absoluteX="122dp"
+        tools:text="123456"/>
+
+    <com.example.eshop.utils.ESTextviewBold
+        android:id="@+id/ESTextviewBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/daySelectedStyle"
+        android:padding="@dimen/clickable_tv_padding"
+        android:text="@string/forgot_password"
+        android:textColor="@color/colourSecondaryText"
+        android:textSize="@dimen/forgot_password_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
+
+    <com.example.eshop.utils.ESButton
+        android:id="@+id/login_btn"
+        android:layout_width="388dp"
+        android:layout_height="49dp"
+        android:background="@drawable/button_background"
+        android:text="@string/login"
+        android:textSize="@dimen/btn_txtsize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ESTextviewBold"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn">
+
+        <com.example.eshop.utils.ESTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account_yet"
+            android:textColor="@color/colourSecondaryText"
+            android:textSize="16sp"/>
+        <com.example.eshop.utils.ESTextviewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textColor="@color/colourSecondaryText"
+            android:padding="@dimen/clickable_tv_padding"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingTop="8dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
